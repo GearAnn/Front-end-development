@@ -1,0 +1,84 @@
+
+目的：给文本加上边框。
+
+1.语句：
+<style>
+ .cl2{border:dashed 2px black}    #  border边框；dashed 短线；
+ .cl2{padding:dashed 2px black}   #  padding内边距；dashed 短线
+ .cl2{margin:dashed 2px black}    #  margin外边距；dashed 短线
+</style>
+
+
+2.对整个页面加边框(重要)：
+<style>
+ body{marginl: 0pex; border:solid green 3px}    # solid 实线
+ # 或者 直接在<style>中加通配符'*’，自动包括了 body
+</style>
+
+
+3.边框属性
+border-style:solid    # 边框样式：实线
+border-color:rd       # 颜色
+border-width:20px
+
+简写： border:30px red solid
+
+
+6.列表属性
+作用：调节文本排队的样式，控制序号的样式。
+
+语句：
+ul,ol{
+list-style:decimal-leading-zero;
+list-stule:none;                       # 去掉序号（重要）
+list-stule:circle;
+list-stule:upper-alpha;
+list-stule:disc;
+}
+
+
+7.display属性
+作用：调节标签的块级和内联属性；可以用作列表的布局。
+
+块级：block
+内联：inline
+
+语句： display:inline-block
+
+例如，调节图片间隙等可以用下面设置：
+
+#div1 {border:3px dashed; word-spacing:-3px }
+
+
+8.移动属性(float，position)
+作用：能够脱离文档流，进行移动布局文本。
+
+语句：
+#div1 {float:right 50px}
+
+注意：folat/position移动布局文本的时候，涉及文档流和脱离文档流。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

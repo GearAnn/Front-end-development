@@ -1,0 +1,187 @@
+
+
+
+html介绍：HyperText Markup Language（超文本标记语言），标准通用标记语言下的一个应用。
+
+超文本标记语言的结构包括“头”部分（英语：Head）、和“主体”部分（英语：Body）
+其中“头”部提供关于网页的信息，“主体”部分提供网页的具体内容。
+
+
+
+
+html标签介绍：常用的10来个
+标签中包含属性，属性是写到标签里面的，由键值对构成，比如：color='red'
+
+
+一.模式标签
+<!DOCTYPE html>
+    作用：出现在html文本的开头，让浏览器在解析文本的时候按照 W3C 的标准模式来解析;
+         否则 compatMode 默认 BackCompat。
+
+         BackCompat:怪异模式，浏览器根据自己的模式解析渲染页面；
+         CSS1Compat:标准模式，浏览器使用W3C的标准模式解析渲染。
+
+二.head标签(头部标签)
+
+1.<meta>
+共有2个属性，分别是 http-equiv 和 name,属性中的不同参数体现了网页的不同功能。
+（1）name属性用于描述网页，对应的属性值为content,content是便于搜索引擎查找信息和分类信息。
+
+    <meta name='keywords' content'中国，人口'>
+    作用：在百度上搜索中国，只要keyword包含有‘中国’的网页，都会显示出来。这就体现了索引与分类；
+
+    <meta name='description' content='中国由13亿人口组成'>
+    作用：百度搜索上显示出来的每一条网页下面都有一个简单的描述，这就是 name='description' 中写的。
+
+（2）http-equiv属性属于功能性属性：
+    Refresh刷新/跳转, X-UA Compatible兼容,content-Type编码类型
+
+    <meta http-equiv='Refresh' content='2;URL=http://www.baidu.com'>
+    作用：2秒后自动跳转到 www.baidu.com
+
+    <meta http-equiv='X-UA Compatible' content='IE=EmulateIE7'>
+    作用：compatible表示兼容，就表示可以兼容 IE7 浏览器
+
+    <meta http-euiv='content-Type' charset='UTF8'>
+    作用：表示编码是utf8
+
+2.<title>
+作用：在网页最上方的标签页上显示文字信，与<link rel='icon' href='图片路径'>结合还可以显示logo
+
+3.<link>
+作用：<link rel='icon' href='图片路径'>就可以给标签页加logo；
+     还可以利用<link>用一个css语句来渲染多个html文件。
+
+
+三、body标签（主体标签）
+
+1.文字大小标签：
+<h1><h2><h3>----<h6>      </h1></h2>.....</h6>
+作用：h1到h6显示字体从大到小
+
+2.段落标签：
+<p>  </p>
+作用：文字换行 和 文字隔一行。
+
+3.换行标签
+<br>
+作用：换行，写在文字最后。
+
+4.空白标签  （最重要）
+<div>  </div>，<span> </span>
+作用：保持文本的初始状态,但是2者有个简单的区别就是 div是块级标签, spana是内联标签。
+
+块级标签：块级标签的内容会占用网页的整行，会迫使跟在</div>后面的内容换行。
+
+内联标签：内联标签的内容不会占用网页整行，只会根据文本的长度来占用。
+注意：所有的标签都分为块级和内联
+
+5.字体加粗标签  (内联)
+<b> </b>
+
+6.斜体字标签    (内联)
+<em> </em>
+
+7.画斜杠表示删除的标签   (内联)
+<strike>  </strike>  (罢工标签)
+<del>   </del>
+
+8.字符上下角标标签 (可以表示 2的3次方，标注等)
+<sub>  </sub>   (下角标)
+<sup>  </sup>   (上角标)
+
+9.html特殊符号(百度上有，共有上百个)
+  &copy  (版权符号，最常用的)
+
+10.图片标签
+<img>  常用有5个属性，还有其他属性，用于插入图片，调整图片，显示图片信息等。
+
+src='图片路径'
+width='数值px'
+height='数值px'
+alt='加载不成功时显示的内容'
+title='鼠标移动到图片上时鼠标上显示的内容'
+
+语句示范： <img src='xx' width='xx' >
+
+11.链接标签
+<a href='网址'>     </a>
+<a href='网址' tatget='_blank'>  </a>
+<a href='#div1'>   </a>
+作用：(1)可以在html中加入网站链接地址;
+     (2)可以在html文本中链接文本章节，章节用 id属性 标记.
+
+语句示范：<a href='http://www.baidu.com'>百度</a>     # 在当前页面跳转百度
+        <a href='网址' tatget='_blank'>     # 重新开启一个新的页面跳转网页
+        <a href='#div3'>第三章</a>    # 可以链接到 id为div3 的文本内容
+
+12.列表标签
+<ul>
+    <li>  </li>
+</ul>
+
+<ol>
+    <li>  </li>
+<ol>
+
+注：ul中嵌套了li标签，这是一个固定用法，记住既可。
+其中：ul = unordered list,是不排序标签; ol=ordered list,是排序标签。
+
+13.自定义列表标签
+<dl>
+    <dt> </dt>
+    <dd> </dd>
+    <dd> </dd>
+</dl>
+
+注：dl = define list, dt = define title, dd = define data
+作用:可以对列表自定义一个标题，然后内容进行排序。
+
+14.表格标签 (不常有，基本通过div+css来实现)
+<tr>:table row
+    <th>:table head cell
+    <td>:table data cell
+
+15.表单标签<form>(最重要)
+表单：用于向服务器传输数据。包含input元素（比如文字，选择框，提交按钮，label,文档设定等）
+
+<from>有很多类型这里重新开一个文档来叙述。
+
+
+4.html创建标签的简写
+
+div>div*3>a    # 创建：一个div中套3个div,然后每个div中再套1个a标签
+
+div>div.time*3>a   # 创建：多一个‘.’ ， 每个div就多一个类名为'time'的属性
+
+
+
+注意：要把鼠标光标放最后面
+
+总结：
+在日常写html文本，插入图片的时候，一般是写<div>空白标签和 CSS 联合使用，因为css有标签的所有功能。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+
+CSS：
+Cascoding Style Sheets 层叠样式表。用来使网页的表现和数据内容的分离。简单来说,CSS就是完善HTML对网页编写的功能。
+
+
+CSSS的4中编码方式：
+
+1.行内式（基本不用）
+格式：直接再HTML标签中加入css属性（多个属性之间用分号';'隔开），这种方式没有体现出CSS的优越性。
+
+例如，<p style='background-color:red'>hello world</p>
+
+缺点：容易和html标签混合在一起，造成html标签与css语句的混淆，不易区分。
+
+
+
+2.嵌入式
+格式：在html的头部标签<head></head>中嵌入<style></style>,然后在通过标签ID来找到需要修饰的文本。
+
+例如，
+<head>
+    <style>
+        div{color:red;background-color:black}  # css属性
+    </style>
+</head>
+<body>
+    <div> hello </div>                         # 文本
+</body>
+
+
+
+3.链接式(用得最多)
+在html<head>中嵌入<link>,利用<link>将一个css文件引入多个html文件进行渲染，
+
+格式：<link href='CSS文件名' rel='stylesheet' type='text/css'>
+步奏：
+ （1）新建一个CSS文件；
+ （2）在CSS文件中写入,CSS语句和渲染的属性，例如，  div{color:red;background-color:black}
+ （3）在需要渲染的html文件头部写入,<link type='text/css' href='css.css'>   # 'css.css'就是新建的css文件名
+
+
+4.导入式
+跟链接式类似，在html头部将一个独立的CSS文件引入HTML中，语法如下：
+<head>
+    <style type='text/css'>
+        @import'CSS文件路径'    # 注意这里和链接式的区别
+    </style>
+</head>
+
+注意：html内部程序运行的时候,是先从上到下解析文本，最后加载@import；而<link>是从上到下依次进行解析。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

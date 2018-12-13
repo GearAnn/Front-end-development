@@ -1,0 +1,103 @@
+
+
+表单标签<form>是内套在<body>主体标签中；
+表单标签<form>通过<form>就可以把信息提交给服务器，内套输入标签<input type=''>输入信息
+
+1.显示输入框 <input type='text'>
+
+    <form>
+        <input type='text'>
+    </form>
+
+  比如：在输入框前加文字，加提交框
+    <form>
+        名字：<input type='text'>
+        性别：<input type='text'>
+        年龄：<input type='text'>
+        <input type='submit' value='提交按钮文本'>       # 提交按钮
+    </form>
+
+<input type=‘ ’>中有很多类型：
+type='password'  # 隐藏输入信息
+type='checbox'   # 复选框，比如在前面加上文本（爱好：篮球，足球，网球）就会在每个选项前有复选框
+type='radio'     # 单选框
+type='button'    # 按钮，可以作为事件的触发来使用
+type='submit'    # 提交按钮，提交信息
+type='reset'     # 重置，重置输入框信息
+
+
+2.输入框中的输入信息发送服务端 (action='url/index' methond='get/post')    # get/post就是请求服务端的2种方法
+
+    <form action='127.0.0.1/index' method='get'>                    # action中放的就是url
+            密码：<input type='password' name='pword'>
+            爱好：篮球<input type='checkbox' name='hobby' value='1'>
+                 足球<input type='checkbox' name='hobby' value='2'>
+    </form>
+
+name属性：  （name是给服务器看的,其作为发送给服务端的字典中的键）
+input中的name属性，就是把name后面的'pword'与input输入的信息，组成键值对打包成字典，发送给服务器。
+在checkbox选项框中，因为没有输入值就要加上value把值与name组成键值对。
+
+注意：在网页的框体中输入的信息发送给服务器，是通过键值对组成的字典发送的。
+
+
+3.显示选择文件上传 (type='file')
+
+    <form>
+        <input type='file'>
+    </form>
+
+
+4.显示选择框让用户选择  （出现一个选择框，框内已经确定了选项）
+
+    <form>
+        <select name='city'>
+           <option name='beijing'>北京</option>
+           <option name='shanghai'>上海</option>
+           <option name='chongqing'>重庆</option>
+        </select>
+    </form>
+
+
+(1)另外，可以在select中加入多选，需要加入multiple属性,size表示选择框可以出现2个信息
+
+    <form>
+         <select name='city' multiple size='2'>
+             <option name='beijing'>北京</option>
+             .......
+             .......
+         </select>
+    </form>
+
+
+
+(2)另外，还可以把选项分组,这样多个选项出现在一个大标题下
+
+    <form>
+        <select name='city'>
+           <optgroup label='中国城市'>
+                <option name='beijing'>北京</option>
+                <option name='shanghai'>上海</option>
+                <option name='chongqing'>重庆</option>
+           </optgroup>
+        <select>
+    </form>
+
+
+5.输入大文本的框:<textarea>元素   （比如，个人简介输入框）
+
+    <form>
+        <textarea rows='10' cols='5'>自我介绍</textarea>
+        # row,cols参数表示框体有10行,5列
+    </form>
+
+
+6.输入框关联显示<label>     (比如，鼠标点击框体前面的文字，光标自动进入某输入框)
+
+    <form>
+        <label for='123'>姓名</label>
+        <input id='123' type='text'>
+    </form>
+
+注：(1)label for 就与 文本框体的id 关联了起来，点击‘姓名’鼠标光标自动进入对应ID的输入框。
+    (2) 同样可以与checkbox关联

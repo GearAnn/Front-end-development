@@ -1,0 +1,201 @@
+
+JavaScript（简称：JS）介绍：
+
+JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。
+它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，
+最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。
+
+JS的作用：可用于给网页作动态效果。
+
+完整的JavaScript是由4个部分组成：
+1.核心（ECMAScript）
+2.文档对象模型（DOM）Document object model(整合JS,CSS,HTML)
+3.浏览器对象模型（BOM）Broswer object model(整合JS,浏览器)
+4.JavaScript也是面向对象的语言
+
+
+JavaScript代码在html中的位置介绍：
+CSS代码有4个引入方式，推荐使用link导入单独的CSS文件（<style link='CSS文件'>）,但是常用的是放在头部的<style>标签内；
+同样，JS可以创建单独的JS文件用src导入(<script src='JS文件'>)，也可以把JS代码<script>标签中，但是一般<script>标签是放在body的最后面。
+
+
+
+JS语法的基础规则：
+
+1.定义变量：JS定义变量要加上‘var’
+ var a=1,b=3
+ alert(a)              # alert在JS相当于print(a)
+ document.write(a)     # 也是相当于print(a)
+
+
+2.JS变量的命名规则：
+ 名字若由多个单词构成，每个单词的首字母大写，并且在名字的前面加上小写的i(int),s(str)表名数据类型
+ 例如: Var iMyTestValue = 0 ; Var sMyTestValue = 'hello'
+
+
+3.使用{}大括号来封装代码,而且换行要尽量加上缩减
+
+
+4.通过'//'来注释
+
+
+5.JS内置函数（只介绍与Python的不同）：
+
+catch:Python中的'try'
+
+void:表示‘空’
+
+throw:Python中的'rase',抛出某个异常
+
+switch:Python中的'if else'
+
+new:实例化对象需要在前面加上，Python实例化对象的不用加
+
+function:Python中的'def'
+
+
+6.数据类型
+JAVA 和 JS的数据类型是一样的，内部利用‘堆内存’‘栈内存’2个内存空间来存取数据；
+数据类型分为：基本数据类型（例如，int str），引用数据类型（例如，对象）；
+
+基本数据类型放在‘堆内容’；
+引用数据类型的对象地址放在‘堆内存’，但是地址指向‘栈内存’中存放的对象
+
+
+7.JS的五种基本数据类型
+    (1)数字类型 Number：包括2部分 'int整数' 和 'float浮点数'；
+
+    (2)字符串 string:只包括Unicode字符；    # 但是python中字符串:包括字节串（byte）和字符串(str)
+
+       常用转义字符：\n：换行 ； \'：单引号 ； \":双引号 ； \\:右划线
+
+    (3)布尔类型 boolean:ture/false
+
+    (4)Undefined类型:因为JS要加上Var申明变量类型，所以当变量没有赋值的时候，会提示underfined
+
+    (5)Null类型：给对象的空内容用null来站位置，看到null肯定就是一个空对象
+       语法： var obj=null
+
+
+8.数据类型转换
+
+数字 + 字符串：将数字转换为字符串               # alert(1+'hello') ,返回：1hello
+
+数字 + 布尔 ：将 true 转换为1，false转化为0    # alert(1+true) ,返回:2
+
+字符串 + 布尔 ：将布尔转化为字符串 true/false
+
+注意：有时候会出现 NaN，但是其出现在表达式中结果一定为false,除了不等于NaN,但是NaN又属于number类型。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

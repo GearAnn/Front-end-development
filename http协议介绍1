@@ -1,0 +1,118 @@
+
+
+http协议：
+hypertext transport protocl,超文本传输协议。规定了浏览器与网站服务器之间的通信规则。
+其基于请求/响应模式，客户端发送给服务器的叫‘请求协议’，服务端发送给客户端的叫‘响应协议’。
+其实协议，就是一套固定格式和规则，通信双方通过固定的格式规则来解析通信内容。
+
+
+URL：统一资源定位符，就是网址。
+格式(3部分)：协议://域名：端口/路径    例如， http://www.jd.com：8080/index.html
+
+
+1.请求协议
+
+请求协议格式：请求首行+请求头+空行+请求体
+
+请求首行： 请求方式/请求路径 协议/版本   # 例如， GET/index.html HTTP/1.1
+
+请求头信息： 请求头名称：请求头内容  (即，key:value 键值对格式)  # 例如，Host:localhost
+
+空行：用来与请求体分隔开。
+
+请求体：用来存放请求数据内容，只有POST有请求体。
+
+注意：GET没有请求体，GET的数据内容是绑定在URL后面，只有POST有请求体。
+
+
+
+
+2.GET请求
+HTTP默认的请求方式就是GET；其没有请求体；数据内容暴露在浏览器地址出现在URL后，数据必须在1K内。
+
+GET请求头（Request Headers）包含如下信息：
+
+ Accept-Language:zh-cn,zh:q=0.5    # 客户端支持的语言，可以在浏览器的工具选项中找到
+
+ Accept-Encoding:gzip,deflate      # 客户端支持的压缩格式，服务器会把有些数据压缩后发送
+
+ Accept-Charse:utf8,GB2312;q=0.7   # 客户都支持的编码
+
+ Connection:keep=alive     # 客户端支持的连接方式，连接会保持一段时间，默认3000ms
+
+ Cookie:JSESSIONID=565681  # 再次访问同一地址时，请求会把上一次服务端返回的响应一并发送到服务端，这样就会形成同一网站的访问记忆
+
+ Host（目标服务器）:127.0.0.1:8000   # 有时候就是目标服务器的url
+
+ User-Agent:xxxx  # 用户代理，用来告诉服务器客户端的操作系统的版本，浏览器的版本等
+
+ Referer:url地址   # 进入跳转/超链接页面后，referer会显示之前的url地址，显示跳转来源
+
+
+3.POST请求
+数据内容出现在请求体中；数据没有大小限制；请求体中若有中文，会使用URL编码。
+
+URL编码：形如，username=%E5%BC%BB%89&password=123456
+
+POST请求头（Request Headers）包下信息与GET请求头一样，但是多了内容信息长度和内容信息类型：
+
+  content-Length:388                  # 请求体长度
+
+  content-Type:multipart/form-data    # 表单的数据类型和编码方式，就是<meta http-equlv='content-type' charset='utf8'>的内容
+
+POST请求体（Requst Payload）:包含了数据内容，以键值对的形式保存。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
